@@ -1,0 +1,22 @@
+services:
+  product-api:
+    image: productapi
+    build: 
+      context: ./product-api
+      dockerfile: Dockerfile
+    ports:
+      - "5000:80"
+  customer-api:
+    image: customerapi
+    build: 
+        context: ./customer-api
+        dockerfile: Dockerfile
+    ports:
+     - "5055:80"
+  payment-api:
+    image: paymentapi
+    build:
+        context: ./payment-api
+        dockerfile: Dockerfile
+    ports:
+     - "5015:80"
